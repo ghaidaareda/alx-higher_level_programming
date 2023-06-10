@@ -6,4 +6,3 @@ def no_c(my_string):
             if i == "c" or i == "C":
                 new_list.remove(i)
         return("".join(new_list))
-
