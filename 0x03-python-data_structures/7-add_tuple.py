@@ -17,4 +17,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
         tuple_c = (tuple_b[0] + 0, 0)
     elif len(tuple_a) == 1 and len(tuple_b) == 0:
         tuple_c = (tuple_a[0] + 0, 0)
+    elif len(tuple_a) == 1 and len(tuple_b) == 1:
+        tuple_c = (tuple_a[0] + tuple_b[0], 0)
     return tuple_c
