@@ -1,5 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
-#include <stddef.h>
 /**
  * is_palindrome-function in C that checks if a singly linked list is a palindrome.
  * Return: 0 if it is not a palindrome, 1 if it is a palindrome
