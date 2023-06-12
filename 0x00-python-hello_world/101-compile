@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+import os
+filename = os.environ.get('PYFILE')
+output_filename = filename + 'c'
+with open(filename, 'rb') as f:
+    code = compile(f.read(), filename, 'exec')
+with open(output_filename, 'wb') as f:
+    f.write(code.co_code)
