@@ -3,8 +3,8 @@
 
 
 class Square:
-    """ empty class represtents a square """
-    def __int__(self, size):
+    """ class represtents a square """
+    def __init__(self, size):
         """
         class Square that defines a square
         size : Private instance attribute
