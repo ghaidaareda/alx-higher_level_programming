@@ -9,16 +9,24 @@ class Square:
         init function defines a square
         size : Private instance attribute
         """
-        self.__size = size
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
 
+    @property
     def size(self):
+        """ getter instance"""
         return self.__size
-        
+
+    @size.setter
     def size(self, value):
         """ instance to set the value of size """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
