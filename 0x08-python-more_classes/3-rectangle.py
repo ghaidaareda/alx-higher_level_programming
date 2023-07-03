@@ -71,7 +71,7 @@ class Rectangle:
         formed of #
         """
         if self.width == 0 or self.height == 0:
-            return " "
+            return ""
         else:
             rec_str = ""
             for i in range(self.height):
