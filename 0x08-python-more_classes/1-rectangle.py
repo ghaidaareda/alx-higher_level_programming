@@ -5,7 +5,7 @@
 class Rectangle:
     """ class defines rectangle"""
     def __init__(self, width=0, height=0):
-        """ 
+        """
         init method define square
         width:private instance define width
         height:private instance define height
