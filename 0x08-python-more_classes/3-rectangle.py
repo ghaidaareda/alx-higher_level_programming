@@ -64,11 +64,16 @@ class Rectangle:
         else:
             rec_perimeter = (2 * self.__width) + (2 * self.__height)
         return rec_perimeter
-    def __repr__(self):
+
+    def __str__(self):
+        """
+        return well read string retprestantion of rectangle
+        formed of #
+        """
         if self.width == 0 or self.height == 0:
-            return" "
+            return " "
         else:
             rec_str = ""
             for i in range(self.height):
                 rec_str += "#" * self.__width + "\n"
-            return rec_str
+            return rec_str[:-1]
