@@ -7,20 +7,20 @@ import function:
 
 import module docstring:
 	>>> d = __impor__("0-add_integer").__doc__
-	>>> if len(d) > 1
-	>>> True
+	>>> if len(d) > 1:
+	... True
 
 import function docstring:
         >>> f = __impor__("0-add_integer").add_integer.__doc__
-        >>> if len(f) > 1
-        >>> True
+        >>> if len(f) > 1:
+        ... True
 
 add two integers:
 	>>> add_integer(1, 2)
 	3
 	>>> add_integer(-3, 2)
         -1
-	>>> add_integer(3, -2)
+	>>> add_integer(3.2, -2)
         1
 	>>> add_integer(-1, -2)
         -3
