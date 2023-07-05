@@ -1,6 +1,16 @@
 #!/usr/bin/python3
 """ matrix_divided function"""
 def matrix_divided(matrix, div):
+    """
+    Divides all elements of a matrix
+
+    Arguments:
+
+    matrix: must be a list of lists ints or floats
+    with rows of the same size
+
+    div: must be a number int or float and not 0
+    """
     new_matrix = []
     msg = "matrix must be a matrix (list of lists) of integers/floats"
     if div == 0:
