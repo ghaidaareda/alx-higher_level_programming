@@ -9,13 +9,15 @@ def add_integer(a, b=98):
     a,b are arguments
     if b not exist it is 98 by default
     """
-    if not isinstance(a, int) and not isinstance(a, float):
-        raise TypeError("a must be an integer")
-    elif not isinstance(b, int) and not isinstance(b, float):
-        raise TypeError("b must be an integer")
-    elif isinstance(a, float):
-        a = int(a)
-    elif isinstance(b, float):
-        b = int(b)
-    else:
-        return int(a) + int(b)
+    try:
+        if isinstance(a, float):
+            a = int(a)
+        elif not isinstance(a, int) and not isinstance(a, float):
+            raise TypeError("a must be an integer")
+        elif isinstance(b, float):
+            b = int(b)
+        elif not isinstance(b, int) and not isinstance(b, float):
+            raise TypeError("b must be an integer")
+        return a + b
+    except TypeError as e:
+        raise TypeError(str(e))

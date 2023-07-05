@@ -161,7 +161,7 @@ Float is not a number:
 	>>> add_integer(1,float('cba'))
         Traceback (most recent call last):
                 ...
-	ValueError: cannot convert float to integer
+	ValueError: cannot convert float CbA to integer 
 	
 	>>> add_integer(float('cba'), 2)
         Traceback (most recent call last):
