@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ matrix_divided function"""
+
+
 def matrix_divided(matrix, div):
     """
     Divides all elements of a matrix
@@ -24,7 +26,7 @@ def matrix_divided(matrix, div):
         if not all(len(sublist) == len_first_sublist for sublist in matrix):
             raise TypeError("Each row of the matrix must have the same size")
         for sublist in matrix:
-            raw =[]
+            raw = []
             for i in sublist:
                 if not isinstance(sublist, list):
                     raise TypeError(msg)
@@ -34,5 +36,3 @@ def matrix_divided(matrix, div):
                 raw.append(result)
             new_matrix.append(raw)
         return new_matrix
-
-
