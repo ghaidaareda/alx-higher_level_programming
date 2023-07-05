@@ -5,33 +5,29 @@ Using ''add_integer(a, b)''
 import function:
 	>>> add_integer = __import__("0-add_integer").add_integer
 
-import module docstring:
-	>>> d = __import__("0-add_integer").__doc__
-
-import function docstring:
-        >>> f = __import__("0-add_integer").add_integer.__doc__
-        >>> if len(f) > 1:
-	        True
-
 add two integers:
 	>>> add_integer(1, 2)
 	3
 	>>> add_integer(-3, 2)
         -1
-	>>> add_integer(3, -2)
-        1
+	>>> add_integer(1, -2)
+        -1
 	>>> add_integer(-1, -2)
         -3
 
 add two floats:
         >>> add_integer(1.0, 2.0)
         3
+	>>> add_integer(1.4, 2)
+	3
         >>> add_integer(-3.1, 2)
         -1
         >>> add_integer(3.0, -2.0)
         1
         >>> add_integer(-1.0, -2.0)
         -3
+	>>> add_integer(-1.4, -2.2)
+	-3
 
 add with non_number as a:
         >>> add_integer("b", 2)
@@ -104,6 +100,11 @@ add with non_number as b:
         Traceback (most recent call last):
                 ...
         TypeError: b must be an integer
+	
+	>>> add_integer(2, "2")
+        Traceback (most recent call last):
+                ...
+        TypeError: b must be an integer
 
 No b added:
 	b is considered 98 by default
@@ -112,7 +113,7 @@ No b added:
 	100
 
 	>>> add_integer(3.0)
-        101
+	101
 
 No b added and a isn't int:
 	>>> add_integer("b")
@@ -157,22 +158,22 @@ No arrguments added:
 	TypeError: add_integer() missing 1 required positional argument: 'a'   
 
 Float is not a number:
-	>>> add_integer(1,float('c'))
+	>>> add_integer(1,float('cba'))
         Traceback (most recent call last):
                 ...
 	ValueError: cannot convert float to integer
 	
-	>>> add_integer(float('c'), 2)
+	>>> add_integer(float('cba'), 2)
         Traceback (most recent call last):
                 ...
         ValueError: cannot convert float to integer
 
-	>>> add_integer(float('c'))
+	>>> add_integer(float('cba'))
         Traceback (most recent call last):
                 ...
         ValueError: cannot convert float to integer
 
-	>>> add_integer(float('c'),float('c'))
+	>>> add_integer(float('cba'),float('cba'))
         Traceback (most recent call last):
                 ...
         ValueError: cannot convert float to integer

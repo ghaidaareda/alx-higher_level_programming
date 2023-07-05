@@ -3,7 +3,7 @@
 
 
 def add_integer(a, b=98):
-    """ 
+    """
     function to add integers
     consider float as integer
     a,b are arguments
@@ -18,4 +18,4 @@ def add_integer(a, b=98):
     elif isinstance(b, float):
         b = int(b)
     else:
-        return int(a + b)
+        return int(a) + int(b)
