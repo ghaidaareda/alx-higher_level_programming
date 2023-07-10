@@ -10,6 +10,8 @@ def add_integer(a, b=98):
     if b not exist it is 98 by default
     """
     try:
+        if a is None:
+            raise TypeError("add_integer() missing 1 required positional argument: 'a'")
         if isinstance(a, float):
             a = int(a)
         elif not isinstance(a, int) and not isinstance(a, float):

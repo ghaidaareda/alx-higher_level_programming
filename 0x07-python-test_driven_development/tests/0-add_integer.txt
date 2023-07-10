@@ -153,9 +153,9 @@ No b added and a isn't int:
 
 No arrguments added:
 	>>> add_integer()
-    	Traceback (most recent call last):
-              ...
-    	TypeError: add_integer() missing 1 required positional argument: 'a'  
+	Traceback (most recent call last):
+          ...
+	TypeError: add_integer() missing 1 required positional argument: 'a'   
 
 Float is not a number:
 	>>> add_integer(float('nan'))
