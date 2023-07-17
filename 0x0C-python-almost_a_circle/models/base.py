@@ -28,4 +28,4 @@ class Base:
             json_dic = json.dumps(list_dictionaries)
             return json_dic
         else:
-            return []
+            return "[]"
