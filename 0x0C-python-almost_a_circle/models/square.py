@@ -28,7 +28,7 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         else:
             self.width = value
-            self.height = value
+            self.height= value
         
     def __str__(self):
         """ string represenation of square """
@@ -47,3 +47,10 @@ class Square(Rectangle):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+        def to_dictionary(self):
+            """ dictionary representation of a square"""
+            return {'id': self.id,
+                    'x': self.x,
+                    'size': getattr(self, 'width'),
+                    'y': self.y}
