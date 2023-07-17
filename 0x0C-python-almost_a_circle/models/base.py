@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/nusr/bin/python3
 """ class Base """
 class Base:
     """
@@ -21,4 +21,11 @@ class Base:
         representation of list_dictionaries
         """
         import json
-        json_dic = jsom.dumps(list_dictionaries)
+        if list_dictionaries:
+            json_dic = json.dumps(list_dictionaries)
+            return json_dic
+        else:
+            return []
+
+    def save_to_file(cls, list_objs)::wq
+
