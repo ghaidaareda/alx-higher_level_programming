@@ -19,7 +19,7 @@ class Square(Rectangle):
     def size(self):
         """size getter"""
         return self.width
-    
+
     @size.setter
     def size(self, value):
         """ size gettet & validtion"""
@@ -29,12 +29,13 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         else:
             self.width = value
-            self.height= value
-        
+            self.height = value
+
     def __str__(self):
         """ string represenation of square """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
-    
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                 self.y, self.width)
+
     def update(self, *args, **kwargs):
         """ assigns attributes """
         if args is not None and len(args) > 0:
