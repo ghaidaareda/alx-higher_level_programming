@@ -2,6 +2,9 @@
 """ class Base """
 
 
+import json
+
+
 class Base:
     """
     class Base
@@ -23,8 +26,7 @@ class Base:
         returns the JSON string
         representation of list_dictionaries
         """
-        import json
-        if list_dictionaries:
+        if list_dictionaries is not None:
             json_dic = json.dumps(list_dictionaries)
             return json_dic
         else:
