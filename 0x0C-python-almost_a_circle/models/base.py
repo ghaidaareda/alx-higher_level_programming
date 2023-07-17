@@ -26,6 +26,3 @@ class Base:
             return json_dic
         else:
             return []
-
-    def save_to_file(cls, list_objs)::wq
-
