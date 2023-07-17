@@ -1,5 +1,7 @@
-#!/nusr/bin/python3
+#!/usr/bin/python3
 """ class Base """
+
+
 class Base:
     """
     class Base
