@@ -9,6 +9,7 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 class State(Base):
+    """Class states"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, 
                 unique=True, nullable=False, autoincrement=True)
