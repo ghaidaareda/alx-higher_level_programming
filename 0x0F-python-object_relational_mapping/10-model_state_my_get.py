@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-script that lists first State objects from the database hbtn_0e_6_usa
+script that prints the State object with the name passed as argument
 """
 if __name__ == "__main__":
     import sys
@@ -13,9 +13,11 @@ if __name__ == "__main__":
                            pool_pre_ping=False)
     Base.metadata.create_all(engine)
     session = Session(engine)
-    first_object = session.query(State).order_by(State.id).first()
-    if first_object:
-        print("{}: {}".format(first_object.id, first_object.name))
+    searched_object = session.query(State).order_by(State.id)\
+        .filter(State.name.like(sys.argv[4])).all()
+    if searched_object:
+        for object in searched_object:
+            print(object.id)
     else:
-        print("Nothing")
+        print("Not found")
     session.close()
