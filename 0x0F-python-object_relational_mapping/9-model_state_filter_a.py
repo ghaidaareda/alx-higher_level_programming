@@ -18,3 +18,4 @@ if __name__ == "__main__":
     .filter(State.name.like('%a%')).all()
     for object in specific_object:
         print(object.name)
+    session.close()
