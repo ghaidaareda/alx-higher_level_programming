@@ -9,12 +9,12 @@ if __name__ == "__main__":
     from sqlalchemy.orm import Session
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format("root", "root", sys.argv[3]),
-                           pool_pre_ping=True)
+                           pool_pre_ping=False)
     Base.metadata.create_all(engine)
     session = Session(engine)
     specific_object = session.query(State)\
         .order_by(State.id)\
         .filter(State.name.like('%a%')).all()
     for object in specific_object:
-        print(object.name)
+        print(f"{object.id}: {object.name}")
     session.close()
