@@ -9,8 +9,8 @@ if __name__ == "__main__":
     from sqlalchemy.orm import sessionmaker
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                        .format("root", "root", sys.argv[3]),
-                        pool_pre_ping=False)
+                           .format("root", "root", sys.argv[3]),
+                           pool_pre_ping=False)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
