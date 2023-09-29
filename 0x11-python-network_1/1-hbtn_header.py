@@ -9,7 +9,7 @@ import urllib.request
 import sys
 
 if __name__ == "__main__":
-    url = 'https://alx-intranet.hbtn.io/status'
+    url = sys.argv[1]
     req = urllib.request.Request(url, method='GET')
     with urllib.request.urlopen(req) as response:
         content = response.read()
