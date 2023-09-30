@@ -11,10 +11,10 @@ from urllib.error import URLError, HTTPError
 if __name__ == "__main__":
     url = sys.argv[1]
     req = urllib.request.Request(url, method='GET')
-    with urllib.request.urlopen(req) as response:
-        content = response.read()
-        decoded_content = content.decode('utf-8')
-        try:
+    try:
+        with urllib.request.urlopen(req) as response:
+            content = response.read()
+            decoded_content = content.decode('utf-8')
             print(decoded_content)
         except urllib.error.HTTPError as e:
             print("Error code:", e.code)
