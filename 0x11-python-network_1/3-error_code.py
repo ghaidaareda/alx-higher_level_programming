@@ -15,4 +15,4 @@ if __name__ == "__main__":
         try:
             print(content)
         except urllib.error.URLError as e:
-            print("Error code:", e.reason)
+            print("Error code:", e.responses)
