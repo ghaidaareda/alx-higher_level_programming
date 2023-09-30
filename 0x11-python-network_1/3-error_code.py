@@ -15,5 +15,5 @@ if __name__ == "__main__":
         decoded_content = content.decode('utf-8')
         try:
             print(decoded_content)
-        except urllib.error.URLError as e:
+        except urllib.error.HTTPError as e:
             print("Error code:", e.code)
