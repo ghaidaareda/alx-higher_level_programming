@@ -11,5 +11,5 @@ import sys
 if __name__ == "__main__":
     url = sys.argv[1]
     mail = {"email": sys.argv[2]}
-    req = Requests.post(url, data=mail)
+    req = requests.post(url, data=mail)
     print(req.text)
